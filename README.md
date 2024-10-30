@@ -81,3 +81,16 @@ Associações com HTTP
  - Read - GET
  - Update - PUT
  - Delete - DELETE
+
+SQLAlchemy
+ - ORM. Na verdade ele tem um ORM.
+        permite trabalhar com SQL, ou any bancos sql.
+        Mapeamento Objeto-Relacional.
+        vai mapear o objeto no relacionamento.
+        abstração do banco de dados. Em outras palavras tenho a possibilidade de mudar de banco sem quebrar a lógica do negócio.
+ - The Twelve Factors (boas praticas)
+        excluir variaveis de dentro do código
+ - Migrations
+        é preciso criar uma evolução no banco de dados
+        o banco de dados acompanha as alterações do código
+        reverter alterações no schema do banco
