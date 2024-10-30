@@ -74,3 +74,10 @@ Objetivos
 
     class Message(BaseModel):
         message: str
+
+Operações com dados
+Associações com HTTP
+ - Create - POST
+ - Read - GET
+ - Update - PUT
+ - Delete - DELETE
