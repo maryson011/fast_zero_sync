@@ -94,3 +94,9 @@ SQLAlchemy
         é preciso criar uma evolução no banco de dados
         o banco de dados acompanha as alterações do código
         reverter alterações no schema do banco
+* Integrando Banco de Dados (SQLAlchemy) ao FastAPI
+ - ORM. a peça principal dessa integração será p ORM
+ - Padrões da sessão
+    Repositório
+    Unidade de Trabalho: chamada unica ao banco para economizar recurso
+    Mapeamento de Identidade

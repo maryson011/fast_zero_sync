@@ -18,6 +18,6 @@ def session():
     table_registry.metadata.create_all(engine)
     # gerenciamento de contexto (live #43)
     with Session(engine) as session:
-        yield session # (live #151)
+        yield session  # (live #151)
 
     table_registry.metadata.drop_all(engine)
