@@ -26,10 +26,8 @@ def client(session):
 def session():
     engine = create_engine(
         'sqlite:///:memory:',
-        connect_args={
-            'check_same_thread': False
-        },  # não faça validações de thread pois o sqlite está em outra...
-        poolclass=StaticPool,  # agora ele não vai validar se o sqlite está na mesma thread. Faz pool estatico
+        connect_args={'check_same_thread': False},
+        poolclass=StaticPool,
     )
     table_registry.metadata.create_all(engine)
     # gerenciamento de contexto (live #43)
