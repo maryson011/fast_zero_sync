@@ -105,5 +105,12 @@ SQLAlchemy
  - Armazenamento seguro de senhas
     poetry add "pwdlib[argon2]"
  - Autenticação
+    OAuth2PasswordRequestForm
+    poetry add python-multipart
+    
+    payload e as claims (basicamente está falando quem é esse token)
+        "sub": "teste@test.com"
+        "exp": 1690258153
+    poetry add pyjwt
  - Autorização
  - Testes e fixtures
