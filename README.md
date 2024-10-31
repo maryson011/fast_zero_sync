@@ -100,3 +100,10 @@ SQLAlchemy
     Repositório
     Unidade de Trabalho: chamada unica ao banco para economizar recurso
     Mapeamento de Identidade
+
+* Autenticação e Autorização
+ - Armazenamento seguro de senhas
+    poetry add "pwdlib[argon2]"
+ - Autenticação
+ - Autorização
+ - Testes e fixtures
