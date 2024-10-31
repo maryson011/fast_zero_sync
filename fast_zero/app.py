@@ -1,11 +1,11 @@
 from http import HTTPStatus
 
-from fastapi import FastAPI, HTTPException, Depends
+from fastapi import Depends, FastAPI, HTTPException
 from sqlalchemy import select
 
+from fast_zero.database import get_session
 from fast_zero.models import User
 from fast_zero.schemas import Message, UserDB, UserList, UserPublic, UserSchema
-from fast_zero.database import get_session
 
 app = FastAPI()
 
@@ -18,8 +18,7 @@ def read_root():
 
 
 @app.post('/users/', status_code=HTTPStatus.CREATED, response_model=UserPublic)
-def crate_user(user: UserSchema, session = Depends(get_session)):
-
+def crate_user(user: UserSchema, session=Depends(get_session)):
     db_user = session.scalar(
         select(User).where(
             (User.username == user.username) | (User.email == user.email)
